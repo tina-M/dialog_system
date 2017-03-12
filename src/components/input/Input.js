@@ -12,8 +12,19 @@ class Input extends Component {
 			value: "",
 		}
 		
+		this.input = null
+		
+		this.setInput = this.setInput.bind(this)
 		this.handleChange = this.handleChange.bind(this)
 		this.handleKeyPress = this.handleKeyPress.bind(this)
+	}
+	
+	componentDidMount() {
+		this.input.focus()
+	}
+	
+	setInput(input) {
+		this.input = input
 	}
 	
 	handleChange(e) {
@@ -43,6 +54,7 @@ class Input extends Component {
 				  value={this.state.value}
 					onChange={this.handleChange}
 					onKeyPress={this.handleKeyPress}
+					ref={this.setInput}
 				/>
 			</div>
 		)
