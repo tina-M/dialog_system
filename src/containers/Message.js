@@ -18,6 +18,10 @@ class Message extends MessageRecord {
 		let input = raw
 		super(input)
 	}
+	
+	getClass() {
+		return (this.type === REQUEST ? "request" : "response") + "-message"
+	}
 }
 
 window.Message = Message
