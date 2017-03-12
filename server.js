@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 // Path to return answer for message (will be replaced by api)
 app.get('/message', function (req, res) {
-	res.send('Answer xyz')
+	res.json({status: "success", message: "safrsaew"})
 })
 
 app.listen(3000, function () {

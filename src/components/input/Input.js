@@ -1,4 +1,7 @@
 import React, { Component } from "react"
+import { connect } from "react-redux"
+
+import { sendMessage } from "../../store/actions"
 
 class Input extends Component {
 	
@@ -23,7 +26,10 @@ class Input extends Component {
 	
 	handleKeyPress(e) {
 		if (e.key === 'Enter') {
-			console.log('do validate');
+			this.props.dispatch(sendMessage(this.state.value))
+			this.setState({
+				value: "",
+			})
 		}
 	}
 	
@@ -43,4 +49,4 @@ class Input extends Component {
 	}
 }
 
-export default Input
+export default connect()(Input)

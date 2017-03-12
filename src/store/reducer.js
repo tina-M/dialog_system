@@ -8,7 +8,7 @@ const initState = Map({
 const reducer = (state = initState, action) => {
 	switch (action.type) {
 		case "ADD_MESSAGE":
-			return state.set("messages", state.messages.push(action.message))
+			return state.set("messages", state.get("messages").push(action.message))
 		case "START_LOADING":
 			return state.set("loading", true)
 		case "STOP_LOADING":
