@@ -1,0 +1,15 @@
+.message-input-wrapper {
+  input.message-input {
+    width: 100%;
+    line-height: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 20px;
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

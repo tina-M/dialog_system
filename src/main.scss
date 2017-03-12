@@ -3,4 +3,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-//@import 'components/app';
+@import 'components/app';
+@import 'components/messages/messages';
+@import 'components/input/input';

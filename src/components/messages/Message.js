@@ -4,8 +4,10 @@ class Message extends Component {
 	render() {
 		const { data } = this.props
 		return (
-			<div className={`${data.getClass()}`}>
-				{data.value}
+			<div className={`${data.getClass()} message`}>
+				<div className="content">
+					{data.value}
+				</div>
 			</div>
 		)
 	}

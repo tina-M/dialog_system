@@ -8,8 +8,10 @@ class App extends Component {
 		return (
 			<div className="app">
 				<h1 className="header">Dialog system</h1>
-				<MessagesList/>
-				<Input/>
+				<div className="app-wrapper">
+					<MessagesList/>
+					<Input/>
+				</div>
 			</div>
 		)
 	}

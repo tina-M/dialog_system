@@ -13,7 +13,7 @@ class MessagesList extends Component {
 	
 	render() {
 		return (
-			<div className="message-list">
+			<div className="messages-list">
 				{
 					this.props.messages.map(this.renderMessage)
 				}

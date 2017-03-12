@@ -51,6 +51,7 @@ class Input extends Component {
 					type="text"
 					name="message-input"
 				  className="message-input"
+				  placeholder="Send message"
 				  value={this.state.value}
 					onChange={this.handleChange}
 					onKeyPress={this.handleKeyPress}
