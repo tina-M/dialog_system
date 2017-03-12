@@ -1,5 +1,5 @@
 # Dialog system
-buld:
+build:
 `npm run build`
 
 start server:
