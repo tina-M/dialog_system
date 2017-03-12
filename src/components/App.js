@@ -6,13 +6,10 @@ import Input from "./input/Input"
 class App extends Component {
 	render() {
 		return (
-			<div>
-				<div>
-					<MessagesList/>
-				</div>
-				<div>
-					<Input/>
-				</div>
+			<div className="app">
+				<h1 className="header">Dialog system</h1>
+				<MessagesList/>
+				<Input/>
 			</div>
 		)
 	}
