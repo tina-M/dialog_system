@@ -15,7 +15,7 @@ export const sendMessage = (message) => {
 			message: requestMessage,
 		})
 		
-		fetch("./message")
+		fetch("https://nlp.fi.muni.cz/projekty/dialogovy_system_pro_akvizici_informaci/test.cgi?text=" + message)
 			.then(res => res.json())
 			.then(json => {
 				if (json.status === "success") {
@@ -34,5 +34,24 @@ export const sendMessage = (message) => {
 					})
 				}
 			})
+		// fetch("./message")
+		// 	.then(res => res.json())
+		// 	.then(json => {
+		// 		if (json.status === "success") {
+		//
+		// 			const responseMessage = new Message({
+		// 				type: RESPONSE,
+		// 				value: json.message,
+		// 			})
+		//
+		// 			dispatch({
+		// 				type: "STOP_LOADING",
+		// 			})
+		// 			dispatch({
+		// 				type: "ADD_MESSAGE",
+		// 				message: responseMessage,
+		// 			})
+		// 		}
+		// 	})
 	}
 }

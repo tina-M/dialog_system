@@ -1,0 +1,41 @@
+body {
+  background-color: white;
+  font-family: Roboto, sans-serif; }
+
+.app {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+  padding: 16px;
+  box-sizing: border-box; }
+
+.messages-list .message {
+  padding: 3px;
+  overflow: auto;
+  margin-bottom: 3px;
+  font-size: 14px; }
+  .messages-list .message .content {
+    border-radius: 10px;
+    padding: 5px 10px; }
+  .messages-list .message.request-message .content {
+    float: right;
+    color: white;
+    background-color: #00bcd4; }
+  .messages-list .message.response-message .content {
+    float: left;
+    color: white;
+    background-color: #ff4081; }
+
+.message-input-wrapper input.message-input {
+  width: 100%;
+  line-height: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 20px;
+  font-size: 14px; }
+  .message-input-wrapper input.message-input:focus {
+    outline: none; }
+
+/*# sourceMappingURL=index.min.css.map*/
