@@ -1,7 +1,9 @@
 import React, { Component } from "react"
+import { connect } from "react-redux"
 
 import MessagesList from "./messages/MessagesList"
 import Input from "./input/Input"
+import Loader from "./loader/Loader"
 
 class App extends Component {
 	render() {
@@ -11,10 +13,13 @@ class App extends Component {
 				<div className="app-wrapper">
 					<MessagesList/>
 					<Input/>
+					{this.props.loading ? <Loader/> : null}
 				</div>
 			</div>
 		)
 	}
 }
 
-export default App
+export default connect(state => ({
+  loading: state.get("loading"),
+}))(App)
