@@ -13,25 +13,29 @@ import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 
 import reducer from "./store/reducer"
+import { API_URL } from "./constants"
 
 import App from "./components/App"
 
-const loggerMiddleware = createLogger()
+fetch(API_URL + "?clean=1")
+  .then(() => {
+    const loggerMiddleware = createLogger()
+  
+    const store = createStore(
+      reducer,
+      applyMiddleware(
+        thunkMiddleware,
+        loggerMiddleware,
+      ),
+    )
 
-const store = createStore(
-	reducer,
-	applyMiddleware(
-		thunkMiddleware,
-		loggerMiddleware,
-	),
-)
-
-// Debug
-window.store = store
-
-ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById("app")
-)
+    // Debug
+    window.store = store
+  
+    ReactDOM.render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+      document.getElementById("app")
+    )
+  })

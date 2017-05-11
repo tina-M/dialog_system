@@ -1,0 +1,1 @@
+export const API_URL = "https://nlp.fi.muni.cz/projekty/dialogovy_system_pro_akvizici_informaci/test.cgi"
